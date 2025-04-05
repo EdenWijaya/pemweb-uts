@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 
 const Beranda = () => {
   return (
-    
     <div className="overflow-x-hidden">
       <Navbar />
       <Hero />
@@ -15,7 +14,6 @@ const Beranda = () => {
       <UnggulanToko />
       <Footer />
     </div>
-    
   );
 };
 

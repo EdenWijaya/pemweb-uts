@@ -1,16 +1,16 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import IsiProduct from '../components/IsiProduct'
-import Footer from '../components/Footer'
+import React from "react";
+import Navbar from "../components/Navbar";
+import IsiProduct from "../components/IsiProduct";
+import Footer from "../components/Footer";
 
 const Product = () => {
-    return (
-        <>
-            <Navbar />
-            <IsiProduct />
-            <Footer />
-        </>
-  )
-}
+  return (
+    <>
+      <Navbar />
+      <IsiProduct />
+      <Footer />
+    </>
+  );
+};
 
-export default Product
+export default Product;
