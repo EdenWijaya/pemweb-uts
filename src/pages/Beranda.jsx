@@ -7,13 +7,15 @@ import Footer from "../components/Footer";
 
 const Beranda = () => {
   return (
-    <>
+    
+    <div className="overflow-x-hidden">
       <Navbar />
       <Hero />
       <ProdukUnggulan />
       <UnggulanToko />
       <Footer />
-    </>
+    </div>
+    
   );
 };
 

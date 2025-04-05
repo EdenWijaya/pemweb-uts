@@ -3,23 +3,22 @@ import { Link } from "react-router-dom";
 
 const Beranda = () => {
   return (
-    <div className="pt-28 px-6">
-      {/* Hero Section */}
-      <section className="text-center py-16 rounded-xl shadow-sm">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-sky-800 mb-4">
-          Selamat Datang di DenzShop
-        </h1>
-        <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-2xl mx-auto">
-          Temukan produk terbaik dengan harga terbaik, langsung dari rumahmu.
-        </p>
-        <Link
-          to="/produk"
-          className="bg-sky-800 text-white px-8 py-3 rounded-full text-lg hover:bg-sky-700 transition duration-300"
-        >
-          Lihat Produk
-        </Link>
+    <>
+      <section className="w-full bg-gray-100 py-16 mt-22">
+        <div className="max-w-screen-xl mx-auto px-6 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-sky-800 mb-4">
+            Selamat datang di Denz<span className="text-black">Shop</span>
+          </h1>
+          <p>
+            Temukan produk terbaik dengan harga terjangkau dan kualitas
+            terpercaya
+          </p>
+          <Link to="/product" className="mt-6 inline-block bg-sky-800 text-white py-3 px-8 rounded-full text-lg hover:bg-sky-700 transition duration-300">
+            Lihat Produk
+          </Link>
+        </div>
       </section>
-    </div>
+    </>
   );
 };
 

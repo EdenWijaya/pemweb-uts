@@ -24,7 +24,7 @@ const KeunggulanToko = () => {
   ];
 
   return (
-    <section className="py-16 px-6 bg-sky-50 rounded-xl shadow-sm mb-16">
+    <section className="py-16 px-6 bg-gray-100 rounded-xl shadow-sm mb-16">
       <h2 className="text-2xl font-bold text-center mb-10">Kenapa Pilih Kami?</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {fitur.map((item) => (

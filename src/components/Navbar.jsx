@@ -11,14 +11,13 @@ const Navbar = () => {
 
   return (
     <nav className="w-full fixed top-0 z-10 bg-white shadow-md">
-      <div className="max-w-[100rem] mx-auto px-6 py-6 flex justify-between items-center">
-        {/* Logo */}
+      <div className="max-w-[100rem] mx-auto px-6 py-6 grid grid-cols-3 items-center">
+        
         <h1 className="text-3xl font-bold">
           <span className="text-sky-800">Denz</span>Shop
         </h1>
-
-        {/* Menu */}
-        <ul className="flex gap-6 items-center">
+        
+        <ul className="flex justify-center gap-6 items-center">
           {menuItems.map((item) => (
             <li key={item.id}>
               <Link to={item.path} className="hover:text-sky-800 font-medium">
@@ -28,8 +27,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* User & Theme Icons */}
-        <div className="flex gap-4 items-center">
+        <div className="flex justify-end gap-4 items-center">
           <Link className="hover:text-sky-800">
             <Phone size={23} />
           </Link>
