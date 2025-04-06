@@ -27,7 +27,7 @@ const Navbar = () => {
         </ul>
 
         <div className="flex justify-end gap-4 items-center">
-          <Link className="hover:text-sky-800">
+          <Link className="hover:text-sky-800" to="/contact">
             <Phone size={23} />
           </Link>
 
