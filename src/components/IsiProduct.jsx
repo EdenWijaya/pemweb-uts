@@ -41,8 +41,16 @@ const IsiProduct = () => {
   const uniqueBrands = [...new Set(allProducts.map((item) => item.brand))];
 
   const addToCart = (item) => {
-    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-    localStorage.setItem("cart", JSON.stringify([...existingCart, item]));
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const itemIndex = storedCart.findIndex((i) => i.id === item.id);
+    if (itemIndex !== -1) {
+      storedCart[itemIndex].quantity += 1;
+    } else {
+      storedCart.push({ ...item, quantity: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(storedCart));
     alert(`${item.title} ditambahkan ke keranjang!`);
   };
 
