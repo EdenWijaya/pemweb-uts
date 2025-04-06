@@ -41,7 +41,8 @@ const IsiProduct = () => {
   const uniqueBrands = [...new Set(allProducts.map((item) => item.brand))];
 
   const addToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]);
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+    localStorage.setItem("cart", JSON.stringify([...existingCart, item]));
     alert(`${item.title} ditambahkan ke keranjang!`);
   };
 
@@ -75,8 +76,9 @@ const IsiProduct = () => {
             <h3 className="font-semibold text-md mb-2">{item.title}</h3>
             <p className="text-sm text-justify text-gray-500 mb-2">{item.description}</p>
             <p className="text-sm text-gray-500 mb-2">{item.rating} ⭐</p>
-            <p className="text-sm text-gray-500 mb-2">Stok {item.stock}</p>
-            <p className="text-sm text-gray-500 mb-2">{item.brand}</p>
+            <p className="text-sm text-gray-500 mb-2">
+              {item.brand}, Stok {item.stock}
+            </p>
             <p className="text-sky-800 font-bold">${item.price}</p>
 
             <button onClick={() => addToCart(item)} className="absolute bottom-3 right-3 bg-sky-800 text-white p-2 rounded-full hover:bg-sky-700 transition">
