@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section className="bg-gray-100 pt-32 pb-16">
       <div className="max-w-[100rem] mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-        {/* Kiri - Teks */}
+        {/* section kiri */}
         <motion.div
           initial={{ x: -80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -37,7 +37,7 @@ const Hero = () => {
           </Link>
         </motion.div>
 
-        {/* Kanan - Animasi */}
+        {/* section kanan */}
         <div className="flex-1 flex justify-end items-center relative h-[350px] max-w-[400px] overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
