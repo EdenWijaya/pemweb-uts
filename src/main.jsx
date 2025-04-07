@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom"; // ✅ Ganti BrowserRouter jadi HashRouter
 import Beranda from "./pages/Beranda";
 import Product from "./pages/Product";
 import UserProfile from "./pages/UserProfile";
@@ -31,8 +31,10 @@ const MainApp = () => {
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
+      {" "}
+      {/* ✅ Ganti dari BrowserRouter */}
       <MainApp />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
