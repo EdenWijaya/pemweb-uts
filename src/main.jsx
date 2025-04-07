@@ -5,7 +5,7 @@ import Beranda from "./pages/Beranda";
 import Product from "./pages/Product";
 import UserProfile from "./pages/UserProfile";
 import Cart from "./pages/Cart";
-
+import CheckOut from "./pages/CheckOut";
 import "./index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -25,6 +25,7 @@ const MainApp = () => {
       <Route path="/Product" element={<Product />} />
       <Route path="/Cart" element={<Cart />} />
       <Route path="/UserProfile" element={<UserProfile />} />
+      <Route path="/CheckOut" element={<CheckOut />} />
     </Routes>
   );
 };
