@@ -10,7 +10,6 @@ import "./index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Komponen wrapper
 const MainApp = () => {
   useEffect(() => {
     AOS.init({

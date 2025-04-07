@@ -6,14 +6,14 @@ import animasi1 from "../assets/FirstAnimation.json";
 import animasi2 from "../assets/SecondAnimation.json";
 import animasi3 from "../assets/ThirdAnimation.json";
 
-const animations = [animasi1, animasi2, animasi3];
+const animasi = [animasi1, animasi2, animasi3];
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % animations.length);
+      setIndex((prev) => (prev + 1) % animasi.length);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
@@ -47,7 +47,7 @@ const Hero = () => {
               transition={{ duration: 1 }}
               className={`absolute w-full h-full ${index === 2 ? "scale-[0.80]" : "scale-125"}`}
             >
-              <Lottie animationData={animations[index]} loop />
+              <Lottie animationData={animasi[index]} loop />
             </motion.div>
           </AnimatePresence>
         </div>
