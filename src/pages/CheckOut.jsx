@@ -34,7 +34,6 @@ const Checkout = () => {
 
       <div className="max-w-4xl mx-auto mt-28 p-6 bg-white rounded-xl shadow-md">
         <h2 className="text-2xl font-bold text-sky-800 mb-6">Data Pemesan</h2>
-
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
