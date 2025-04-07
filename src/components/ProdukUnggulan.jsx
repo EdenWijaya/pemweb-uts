@@ -12,7 +12,9 @@ const ProdukUnggulan = () => {
 
   return (
     <section className="max-w-[100rem] mx-auto px-6 mb-16">
-      <h2 className="text-2xl font-bold my-6 text-center text-sky-800">🖥️ Device Unggulan</h2>
+      <h2 data-aos="fade-down" className="text-2xl font-bold my-6 text-center text-sky-800">
+        🖥️ Device Unggulan
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {produk.map((item) => (
           <div key={item.id} className="border rounded-2xl p-4 shadow-sm hover:shadow-md transition">
