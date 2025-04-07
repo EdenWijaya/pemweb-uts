@@ -15,7 +15,6 @@ const Navbar = () => {
         <h1 className="text-3xl font-bold">
           <span className="text-sky-800">Denz</span>Shop
         </h1>
-
         <ul className="flex justify-center gap-6 items-center">
           {menuItems.map((item) => (
             <li key={item.id}>
@@ -25,12 +24,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
         <div className="flex justify-end gap-4 items-center">
-          {/* <Link className="hover:text-sky-800" to="/contact">
-            <Phone size={23} />
-          </Link> */}
-
           <Link className="hover:text-sky-800" to="/UserProfile">
             <User size={24} />
           </Link>

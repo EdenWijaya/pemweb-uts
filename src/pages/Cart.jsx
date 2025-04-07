@@ -46,10 +46,8 @@ const IsiCart = () => {
                 key={idx}
                 className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border p-4 rounded-xl shadow-sm"
               >
-                {/* Gambar */}
                 <img src={item.thumbnail} alt={item.title} className="w-24 h-24 object-contain rounded-md" />
 
-                {/* Info Produk */}
                 <div className="flex-1">
                   <h4 className="font-semibold text-lg">{item.title}</h4>
                   <p className="text-gray-500">{item.description}</p>
@@ -58,7 +56,6 @@ const IsiCart = () => {
                   </p>
                 </div>
 
-                {/* Kontrol Kuantitas & Hapus */}
                 <div className="flex items-center gap-4 mt-2 md:mt-0">
                   <div className="flex items-center border rounded-full px-3 py-1">
                     <button onClick={() => handleQuantityChange(idx, -1)} className="text-gray-600 hover:text-black">
@@ -75,8 +72,6 @@ const IsiCart = () => {
                 </div>
               </div>
             ))}
-
-            {/* Total Harga */}
             <div className="flex justify-end items-center gap-6 mt-8">
               <p className="text-xl font-bold text-gray-800">Total: ${totalHarga.toFixed(2)}</p>
               <a href="/checkout" className="bg-sky-800 text-white px-6 py-3 rounded-md hover:bg-sky-700 transition">

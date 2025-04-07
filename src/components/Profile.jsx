@@ -13,7 +13,6 @@ const Profile = () => {
   const [isEdit, setIsEdit] = useState(false);
   const [form, setForm] = useState(defaultData);
 
-  // Load dari localStorage saat pertama kali
   useEffect(() => {
     const savedData = localStorage.getItem("userProfile");
     if (savedData) {
@@ -36,7 +35,6 @@ const Profile = () => {
   return (
     <div className="max-w-xl mx-auto mt-28 p-6 bg-white rounded-xl shadow-md">
       <h2 className="text-2xl font-bold text-sky-800 mb-6 text-center">Profil Pengguna</h2>
-
       <div className="flex justify-center mb-6">
         <img
           src={userData.foto}
@@ -116,7 +114,7 @@ const Profile = () => {
             onClick={() => setIsEdit(true)}
             className="bg-sky-800 hover:bg-sky-700 text-white px-4 py-2 rounded-md"
           >
-            Edit Profil
+            Edit Profile
           </button>
         )}
       </div>

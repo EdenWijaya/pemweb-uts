@@ -46,7 +46,6 @@ const IsiProduct = () => {
 
   const addToCart = (item) => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-
     const itemIndex = storedCart.findIndex((i) => i.id === item.id);
     if (itemIndex !== -1) {
       storedCart[itemIndex].quantity += 1;
@@ -55,12 +54,11 @@ const IsiProduct = () => {
     }
 
     localStorage.setItem("cart", JSON.stringify(storedCart));
-    alert(`${item.title} ditambahkan ke keranjang!`);
+    alert(`${item.title} telah ditambahkan ke keranjang`);
   };
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-20 mt-10">
-      {/* Filter */}
       <div className="flex flex-col md:flex-row gap-4 mb-10">
         <select
           value={categoryFilter}
@@ -88,7 +86,6 @@ const IsiProduct = () => {
         </select>
       </div>
 
-      {/* Produk */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filtered.map((item) => (
           <div
