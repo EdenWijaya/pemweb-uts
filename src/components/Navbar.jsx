@@ -5,8 +5,8 @@ import { User, Phone } from "lucide-react";
 const Navbar = () => {
   const menuItems = [
     { id: 1, title: "Home", path: "/" },
-    { id: 2, title: "Product", path: "/product" },
-    { id: 3, title: "Cart", path: "/cart" },
+    { id: 2, title: "Produk", path: "/product" },
+    { id: 3, title: "Keranjang", path: "/cart" },
   ];
 
   return (

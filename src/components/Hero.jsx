@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import animasi1 from "../assets/FirstAnimation.json";
 import animasi2 from "../assets/SecondAnimation.json";
+import animasi3 from "../assets/ThirdAnimation.json";
 
-const animations = [animasi1, animasi2];
+const animations = [animasi1, animasi2, animasi3];
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -44,7 +45,7 @@ const Hero = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className="absolute w-full h-full scale-125"
+              className={`absolute w-full h-full ${index === 2 ? "scale-[0.80]" : "scale-125"}`}
             >
               <Lottie animationData={animations[index]} loop />
             </motion.div>
