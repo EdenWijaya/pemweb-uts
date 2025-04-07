@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Trash2, Plus, Minus } from "lucide-react";
 import Navbar from "../components/Navbar";
 
-const IsiCart = () => {
+const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
@@ -85,4 +85,4 @@ const IsiCart = () => {
   );
 };
 
-export default IsiCart;
+export default Cart;
