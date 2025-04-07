@@ -118,12 +118,6 @@ const Profile = () => {
           </button>
         )}
       </div>
-
-      <div className="flex justify-end items-center gap-6 mt-8">
-        <a href="/Checkout" className="bg-sky-800 text-white px-6 py-3 rounded-md hover:bg-sky-700 transition">
-          Bayar
-        </a>
-      </div>
     </div>
   );
 };
