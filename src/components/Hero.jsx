@@ -1,35 +1,58 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import Lottie from "lottie-react";
-import shoppingAnimation from "../assets/keranjang.json";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import animasi1 from "../assets/FirstAnimation.json";
+import animasi2 from "../assets/SecondAnimation.json";
 
-const Beranda = () => {
+const animations = [animasi1, animasi2];
+
+const Hero = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % animations.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="w-full bg-gray-100 py-16 mt-20">
-      <div className="max-w-[100rem] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-        {/* Kiri */}
-        <div data-aos="fade-right">
-          <h1 className="text-3xl md:text-4xl font-bold text-sky-800 mb-4">
-            Selamat datang di Denz<span className="text-black">Shop</span>
-          </h1>
+    <section className="bg-gray-100 pt-32 pb-16">
+      <div className="max-w-[100rem] mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        {/* Kiri - Teks */}
+        <motion.div
+          initial={{ x: -80, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="flex-1 text-center md:text-left"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-sky-800 mb-4">
+            Selamat datang di <span className="text-black">Denz</span>Shop
+          </h2>
           <p className="text-gray-700 mb-6">Temukan produk terbaik dengan harga terbaik, langsung dari rumahmu</p>
-          <Link
-            to="/product"
-            className="inline-block bg-sky-800 text-white py-3 px-8 rounded-xl text-lg hover:bg-sky-700 transition duration-300"
-          >
+          <Link to="/product" className="bg-sky-800 text-white px-6 py-3 rounded-md hover:bg-sky-700 transition">
             Lihat Produk
           </Link>
-        </div>
+        </motion.div>
 
         {/* Kanan - Animasi */}
-        <div className="flex justify-center items-center" data-aos="fade-left">
-          <div className="w-full max-w-[350px] h-auto">
-            <Lottie animationData={shoppingAnimation} loop={true} />
-          </div>
+        <div className="flex-1 flex justify-end items-center relative h-[350px] max-w-[400px] overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className="absolute w-full h-full scale-125"
+            >
+              <Lottie animationData={animations[index]} loop />
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
   );
 };
 
-export default Beranda;
+export default Hero;

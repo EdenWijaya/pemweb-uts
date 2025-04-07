@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full fixed top-0 z-10 bg-white shadow-md">
-      <div className="max-w-[100rem] mx-auto px-6 py-6 grid grid-cols-3 items-center">
+      <div data-aos="fade-in" className="max-w-[100rem] mx-auto px-6 py-6 grid grid-cols-3 items-center">
         <h1 className="text-3xl font-bold">
           <span className="text-sky-800">Denz</span>Shop
         </h1>
