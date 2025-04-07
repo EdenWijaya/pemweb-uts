@@ -39,7 +39,10 @@ const IsiCart = () => {
       ) : (
         <div className="space-y-6">
           {cartItems.map((item, idx) => (
-            <div key={idx} className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border p-4 rounded-xl shadow-sm">
+            <div
+              key={idx}
+              className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border p-4 rounded-xl shadow-sm"
+            >
               {/* Gambar */}
               <img src={item.thumbnail} alt={item.title} className="w-24 h-24 object-contain rounded-md" />
 
