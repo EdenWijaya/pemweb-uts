@@ -74,7 +74,7 @@ const Cart = () => {
             ))}
             <div className="flex justify-end items-center gap-6 mt-8">
               <p className="text-xl font-bold text-gray-800">Total: ${totalHarga.toFixed(2)}</p>
-              <a href="/Checkout" className="bg-sky-800 text-white px-6 py-3 rounded-md hover:bg-sky-700 transition">
+              <a href="/checkout" className="bg-sky-800 text-white px-6 py-3 rounded-md hover:bg-sky-700 transition">
                 Bayar
               </a>
             </div>
